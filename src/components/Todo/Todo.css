@@ -1,0 +1,133 @@
+.todo-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.category-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2vw;
+  padding: 20px 0;
+  width: 100%;
+  flex-wrap: wrap;
+  min-height: 0;
+}
+
+.loading {
+  text-align: center;
+  color: #ccc;
+  padding: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.clear-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.clear-icon:hover {
+  color: #dc3545;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 35px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #2e2e2e;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  outline: none;
+}
+
+.no-results {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .todo-container {
+    padding: 8px;
+    padding-top: 60px; /* Отступ для бургер-меню */
+    overflow-y: auto; /* Прокрутка всего контейнера */
+  }
+
+  .search-bar {
+    padding: 0 5px;
+    max-width: 100%;
+  }
+
+  .search-input {
+    font-size: 0.9rem; /* Уменьшаем шрифт для компактности */
+    padding: 8px 12px 8px 32px;
+  }
+
+  .search-icon,
+  .clear-icon {
+    font-size: 1rem; /* Уменьшаем иконки */
+  }
+
+  .category-section {
+    flex-direction: column;
+    gap: 20px; /* Увеличиваем зазор между категориями */
+    padding: 10px 0;
+    height: auto;
+  }
+
+  .category-section > * {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-height: 600px) {
+  .todo-container {
+    padding: 8px;
+    overflow-y: auto;
+  }
+
+  .category-section {
+    padding: 8px 0;
+  }
+}
